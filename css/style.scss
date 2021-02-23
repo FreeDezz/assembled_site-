@@ -1,0 +1,528 @@
+$background-color: #005be4;
+$blue: #007dea;
+$button_color: #0996ee;
+$Light_blue: #3aabf1;
+$basic-font: Play, Arial;
+$main_font: Ubuntu,;
+$myriad_font: Myriad Pro,;
+
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: $background-color;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+main {
+  height: 100%;
+}
+
+
+/*header_container_item*/
+.slider_home_content {
+  height: 100%;
+  padding-bottom: 121.84px;
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+.header_content {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-wrap: nowrap;
+
+  input {
+    opacity: 0;
+  }
+}
+
+  .header_container_item {
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s .65s;
+
+    .text-content {
+      max-width: 50%;
+      margin-right: 40px;
+
+      h1 {
+        font-family: $basic-font;
+        font-size: 60px ;
+        font-weight: 800;
+        color: white;
+      }
+
+      p {
+        font-family: "Montserrat";
+        font-size: 19.1px ;
+        font-weight: 400;
+        color: white;
+        width: 90%;
+      }
+    }
+  }
+
+}
+
+
+[id^='slide']:checked + .slide {
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  transition: left .65s ease-out;
+}
+
+
+
+
+
+
+.btn {
+  font-family: $basic-font;
+  font-size: 17.82px;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  outline: none;
+  background-color: $blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 230px;
+  border-radius: 20px;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: $button_color;
+}
+
+.btn img {
+  margin-right: 30px;
+  width: 15%;
+}
+
+.img-content {
+  max-width: 50%;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider_span {
+  display: flex;
+  position: absolute;
+  left: 40%;
+  width: 20%;
+  max-width:100%;
+  top: 80%;
+  justify-content: center;
+
+  label{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $blue;
+    margin: 0 2px;
+    transition: background-color 1s;
+    z-index: 101;
+  }
+
+  label:hover {
+    background-color: $Light_blue;
+    transition: background-color 1s;
+  }
+
+}
+
+/*/content*/
+
+
+/*footer*/
+.footer {
+  width: 100%;
+  max-height: 125px;
+  background-color: $blue;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+}
+
+
+.logo {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 50px;
+  position: relative;
+
+  p {
+    color: white;
+    font-size: 40px;
+    font-family: $main_font;
+    font-weight: 500;
+  }
+}
+
+
+.img_logo {
+  position: relative;
+  width: 25%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    object-fit: contain;
+    left: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+.list_nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  position: relative;
+  width: 20%;
+  max-width: 155px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  .nav_a {
+    display: block;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-family: "Raleway";
+    font-size: 15px;
+    text-transform: uppercase;
+    border-right: 1.5px solid $background-color;
+    transition: background-color 1s;
+  }
+  .product_list {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    white-space: nowrap;
+    display: flex;
+    height: 50%;
+    padding: 0;
+    margin: 0;
+    clip: rect(0 0 0 0);
+    margin: -1;
+    width: 0;
+    .product{
+      list-style-type: none;
+      margin-right: 5px;
+      a{
+        padding: 22px 40px;
+        outline: none;
+        border-radius: 8px;
+        background-color: white;
+        text-decoration: none;
+        font-family: "Raleway";
+        font-size: 15px;
+        color: #777777;
+        -webkit-box-shadow: 2px 1px 8px 3px rgba(0, 0, 0, 0.13);
+        -moz-box-shadow: 2px 1px 8px 3px rgba(0, 0, 0, 0.13);
+        box-shadow: 2px 1px 8px 3px rgba(0, 0, 0, 0.13);
+        margin-right: 7px;
+        font-weight: 400;
+        transition: all 0.5s ease-out;
+      }
+      a:hover {
+        color: white;
+        background-color: $button_color;
+      }
+
+    }
+
+  }
+}
+
+.nav-item:hover > .product_list {
+    clip: auto;
+    width: auto;
+    margin: 0;
+    height: 50%;
+    transition: all 0.5s ease-out;
+
+  }
+
+
+
+  .nav-icon {
+    border: 1px solid transparent;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    color: white;
+    margin: 20px auto;
+    transition: background-color 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+.nav_a:hover {
+    background-color: $button_color;
+  span{
+    background-color: $Light_blue;
+  }
+  }
+
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  background: none;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 0 solid $button_color;
+  transition: .2s;
+}
+
+.nav-item:hover::before {
+  content: '';
+  position: absolute;
+  background: none;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0 0 0 -15px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid $button_color;
+  transition: .2s;
+}
+
+.list_nav:focus {
+  outline: 0;
+  .nav-item{
+    outline: 0;
+  }
+}
+
+/*/footer*/
+
+
+@media (orientation: portrait) and (max-width: 1024px) {
+  .header_container_item {
+    flex-direction: column;
+    text-align: center;
+    max-height: 100%;
+  }
+  .slider_home_content {
+    padding-bottom: 90px;
+
+    .text-content {
+      max-width: 100%!important;
+      margin: 0!important;
+      padding: 0;
+
+      p {
+        margin: 0 auto;
+        padding-bottom: 30px;
+        font-size: 17px;
+        width: 90%;
+      }
+
+      h1 {
+        margin: 0 auto;
+        padding-bottom: 30px;
+        font-size: 40px;
+      }
+    }
+  }
+  .img-content {
+    max-width: 100%;
+    max-height: 45%;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+
+
+  .btn {
+    font-size: 15px;
+  }
+
+  .btn img {
+    width: 25px;
+  }
+
+  .slider_span {
+    top: 88%;
+  }
+
+  /*footer*/
+  .footer {
+    max-height: 90px;
+
+
+    .logo {
+      display: none;
+    }
+
+    .nav {
+      width: 100%;
+
+      .nav-item {
+        max-width: none;
+      }
+
+      .nav-icon {
+        margin: 12px auto;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .footer {
+    max-height: 70px;
+
+
+    .nav-item {
+      font-size: 10px;
+
+      span {
+        margin: 5px auto;
+      }
+    }
+    .logo {
+      margin: 5px 5px;
+      width: 35%;
+      .img_logo {
+        width: 50%;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .slider_home_content {
+    padding-bottom: 70px;
+  }
+
+  .text-content {
+    margin: 0;
+    max-width: none;
+
+    h1 {
+      margin: 0;
+    }
+  }
+  .btn {
+    padding: 8px 0;
+  }
+  .img-content {
+    max-height: 80%;
+    max-width: 35%;
+  }
+  .header_container_item {
+    top: 5px!important;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .text-content {
+    padding-left: 5px;
+    margin: 0;
+    max-width: 65%!important;
+
+    h1 {
+      font-size: 30px !important;
+    }
+
+    p {
+      font-size: 14.1px !important;
+    }
+
+    .btn {
+      padding: 8px 0;
+    }
+  }
+  .nav-item {
+    a {
+      font-size: 12px!important;
+    }
+
+  }
+
+
+}
+
+@media screen and (max-width: 320px) {
+  .img-content {
+    max-height: 52%;
+  }
+}
+
+
