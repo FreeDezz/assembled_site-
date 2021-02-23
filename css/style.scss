@@ -154,10 +154,7 @@ main {
   width: 100%;
   max-width:100%;
   top: 5%;
-  right: 0;
-  flex-direction: column;
-
-
+  left: 20px;
 
   label{
     border-radius: 50%;
@@ -431,6 +428,8 @@ main {
 
   .slider_span {
     top: 2%;
+    flex-direction: column;
+    left: 0;
   }
 
   /*footer*/
@@ -547,32 +546,7 @@ main {
   .img-content {
     max-height: 42%;
   }
-  .slider_span {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    max-width:100%;
-    top: 5%;
-    right: 0;
-    flex-direction: column;
 
-    label{
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      margin: 0 2px;
-      transition: background-color 1s;
-      z-index: 101;
-      margin-bottom: 7px;
-    }
-
-    label:hover {
-      background-color: $Light_blue;
-      transition: background-color 1s;
-    }
-
-  }
 
 }
 @media screen and (max-height: 400px) {
