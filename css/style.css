@@ -48,11 +48,13 @@ main {
   height: 100%;
   left: 100%;
   z-index: 10;
-  transition: left 0s 0.65s;
+  transition: left 0.65s;
 }
 .slider_home_content .header_container_item .text-content {
   max-width: 50%;
   margin-right: 40px;
+  opacity: 0;
+  transition: opacity 0.65s ease-out;
 }
 .slider_home_content .header_container_item .text-content h1 {
   font-family: Play, Arial;
@@ -93,8 +95,12 @@ main {
 [id^=slide]:checked + .slide {
   left: 0;
   z-index: 100;
-  height: 100%;
   transition: left 0.65s ease-out;
+}
+
+[id^=slide]:checked + .slide > .text-content {
+  opacity: 1;
+  transition: opacity 0.65s ease-out;
 }
 
 #slider-1:checked ~ .slider_span label[for=slider-1],
@@ -292,26 +298,10 @@ main {
   transition: all 0.5s ease-out;
 }
 
-/*.nav-icon {
-    border: 1px solid transparent;
-    font-family: "fontello";
-    font-size: 27px;
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.9);
-    height: 2em;
-    width: 2em;
-    border-radius: 50%;
-    color: white;
-    margin: 20px auto;
-    transition: background-color 1s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-*/
 .nav_a:hover {
   background-color: #0996ee;
 }
-.nav_a:hover span {
+.nav_a:hover svg {
   background-color: #3aabf1;
 }
 
